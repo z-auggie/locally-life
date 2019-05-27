@@ -1,0 +1,20 @@
+<!-- pages/list/list.wxml -->
+<view class="search">
+    <input type="text" placeholder="搜索" confirm-type="search" bindconfirm="search" value="{{queryValue}}" />
+    <icon type="search" size="20" />
+</view>
+<view class="list">
+    <navigator class="item" wx:for="{{shops}}" wx:key="item.id" url="/pages/detail/detail?id={{item.id}}">
+        <image src="{{item.images[0]}}" />
+        <view class="detail">
+            <text>{{item.name}}</text>
+            <text>电话：{{item.phone}}</text>
+            <text>地址：{{item.address}}</text>
+            <text>营业时间：{{item.businessHours}}</text>
+        </view>
+        <text class="score">{{item.score}}</text>
+    </navigator>
+    <!-- login... -->
+    <view wx:if="{{loadHas}}" class="loadMore">正在加载...</view>
+    <view wx:else class="loadMore">ε=(´ο｀*))) 已经到底啦！！！</view>
+</view>

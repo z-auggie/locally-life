@@ -1,25 +1,18 @@
-const fetch = require('../../utils/fetch')
-
+// pages/profile/profile.js
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
-    slides: [],
-    icons: []
+
   },
 
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-    fetch('slides').then(res => { //轮播
-      this.setData({ slides: res.data })
-    })
-    fetch('categories').then(res => { //菜单
-      this.setData({ icons: res.data })
-    })
+
   },
 
   /**

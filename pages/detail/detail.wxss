@@ -1,0 +1,84 @@
+/* pages/detail/detail.wxss */
+swiper {
+    height: 500rpx;
+}
+
+.swiprtImg {
+    width: 100%;
+    height: 100%;
+}
+
+.detail {
+    display: flex;
+    background-color: #fff;
+    flex-direction: column;
+    margin-bottom: 20rpx;
+    padding: 20rpx;
+    font-size: 28rpx;
+    color: #333;
+}
+
+.detail .name {
+    font-size: 36rpx;
+    color: black;
+    font-weight: 700;
+}
+
+.comments,
+.comments .item,
+.commentsDetail,
+.title {
+    display: flex;
+    flex-direction: column;
+    background-color: #fff;
+    font-size: 28rpx;
+}
+
+.comments {
+    padding: 20rpx;
+}
+
+.comments .item {
+    flex-direction: row;
+    justify-content: space-between;
+    margin-bottom: 20rpx;
+    padding-bottom: 20rpx;
+    border-bottom: 1rpx solid #f0f0f0;
+}
+.item image {
+    width: 120rpx;
+    height: 120rpx;
+    margin-right: 10rpx;
+}
+.item .commentsDetail {
+    flex: 1;
+}
+
+.title .name {
+    font-weight: 700;
+    color: cornflowerblue;
+}
+
+.title .date {
+    font-size: 24rpx;
+}
+
+.rating text {
+    font-size: 24rpx;
+    color: orangered;
+}
+
+.content {
+    text-overflow: -o-ellipsis-lastline;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 4;
+    -webkit-box-orient: vertical;
+}
+
+.images {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}

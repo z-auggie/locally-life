@@ -1,27 +1,31 @@
 const fetch = require('../../utils/fetch')
-
+// pages/detail/detail.js
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
-    slides: [],
-    icons: []
+    shops: []
   },
 
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-    fetch('slides').then(res => { //轮播
-      this.setData({ slides: res.data })
-    })
-    fetch('categories').then(res => { //菜单
-      this.setData({ icons: res.data })
+    fetch(`shops/${options.id}`)
+      .then(res => {
+        this.setData({ shops: res.data })
+        console.log(this.data.shops)
+      })
+  },
+  //预览图片
+  preview(e) {
+    wx.previewImage({
+      current: e.target.dataset.src, // 当前显示图片的http链接
+      urls: this.data.shops.images // 需要预览的图片http链接列表
     })
   },
-
   /**
    * 生命周期函数--监听页面初次渲染完成
    */
